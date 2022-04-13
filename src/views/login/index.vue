@@ -66,6 +66,7 @@ export default {
   created() {
     let ds = 33;
     console.log(ds);
+    sss = 22;
   },
   methods: {
     submitForm(formName) {
