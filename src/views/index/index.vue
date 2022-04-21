@@ -1,12 +1,10 @@
 <template>
-	<div id="app">
-		<router-view> </router-view>
-	</div>
+    <div class="index-page">我是 首页</div>
 </template>
 
 <script>
 export default {
-	name: 'App'
+    name: "index-page",
 }
 </script>
 

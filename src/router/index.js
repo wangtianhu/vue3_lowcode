@@ -2,9 +2,20 @@ import Vue from "vue"
 import VueRouter from "vue-router"
 
 Vue.use(VueRouter)
+const originalPush = VueRouter.prototype.push
+VueRouter.prototype.push = function push(location, onResolve, onReject) {
+    if (onResolve || onReject) return originalPush.call(this, location, onResolve, onReject)
+    return originalPush.call(this, location).catch(err => err)
+}
 
 const routes = [
-    { name: "login", path: "/login", meta: { title: "login" }, component: () => import("../views/login/index"), hidden: true },
+    {
+        name: "login",
+        path: "/login",
+        meta: { title: "login" },
+        component: () => import("../views/login/index"),
+        hidden: true,
+    },
     //   { name: "/", path: "/", component: Layout, redirect: "/index", hidden: false, children: [
     //       { name: "index", path: "/index", meta: { title: "index" }, component: () => import("../views/index/index") },
     //   ]},

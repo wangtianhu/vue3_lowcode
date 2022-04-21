@@ -1,12 +1,10 @@
 <template>
-	<div id="app">
-		<router-view> </router-view>
-	</div>
+    <div class="tree-wrapper">我是树先生</div>
 </template>
 
 <script>
 export default {
-	name: 'App'
+    name: "index-page",
 }
 </script>
 

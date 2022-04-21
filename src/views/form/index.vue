@@ -1,12 +1,10 @@
 <template>
-	<div id="app">
-		<router-view> </router-view>
-	</div>
+    <div class="form-wrapper">我是表单</div>
 </template>
 
 <script>
 export default {
-	name: 'App'
+    name: "form-page",
 }
 </script>
 

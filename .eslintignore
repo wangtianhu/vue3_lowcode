@@ -11,3 +11,4 @@ dist
 .husky
 .local
 /bin
+vue.config.js
